@@ -18,4 +18,8 @@ class Movie {
     required this.releaseDate,
     required this.genreIds,
   });
+
+  String get posterUrl => posterPath != null
+      ? 'https://image.tmdb.org/t/p/w500$posterPath'
+      : 'https://via.placeholder.com/500x750?text=No+Image';
 }
